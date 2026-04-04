@@ -9,12 +9,23 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-image: url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-attachment: fixed;
+            color: white;
+            padding: 20px;
+        }
+        .container {
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 1000px;
         }
         .tab {
             overflow: hidden;
             border: 1px solid #ccc;
-            background-color: #f1f1f1;
+            background-color: #333;
         }
         .tab button {
             background-color: inherit;
@@ -24,75 +35,274 @@
             cursor: pointer;
             padding: 14px 16px;
             transition: 0.3s;
+            color: white;
         }
         .tab button:hover {
-            background-color: #ddd;
+            background-color: #555;
         }
         .tab button.active {
-            background-color: #ccc;
+            background-color: #4CAF50;
         }
         .tabcontent {
             display: none;
             padding: 20px;
             border: 1px solid #ccc;
             border-top: none;
-            background-color: white;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
         }
     </style>
 </head>
 <body>
-    <h1>Portfolio - Nolan GILLIOCQ</h1>
+    <div class="container">
+        <h1 style="text-align: center;">Portfolio - Nolan GILLIOCQ</h1>
 
-    <div class="tab">
-        <button type="button" class="tablinks" onclick="openTab(event, 'presentation')">Présentation</button>
-        <button type="button" class="tablinks" onclick="openTab(event, 'stage1')">Stage 1</button>
-        <button type="button" class="tablinks" onclick="openTab(event, 'stage2')">Stage 2</button>
-        <button type="button" class="tablinks" onclick="openTab(event, 'projet')">Projet GastonMediLab</button>
-        <button type="button" class="tablinks" onclick="openTab(event, 'grilles')">Grilles BTS</button>
-    </div>
+        <div class="tab">
+            <button type="button" class="tablinks" onclick="openTab(event, 'presentation')">Présentation</button>
+            <button type="button" class="tablinks" onclick="openTab(event, 'stage1')">Stage 1</button>
+            <button type="button" class="tablinks" onclick="openTab(event, 'stage2')">Stage 2</button>
+            <button type="button" class="tablinks" onclick="openTab(event, 'projet')">Projet GastonMediLab</button>
+            <button type="button" class="tablinks" onclick="openTab(event, 'grilles')">Grilles BTS</button>
+        </div>
 
-    <!-- Onglet Présentation -->
-    <div id="presentation" class="tabcontent">
-        <h2>Présentation du candidat</h2>
-        <p><strong>Nom complet :</strong> Nolan GILLIOCQ</p>
-        <p><strong>Formation :</strong> BTS SIO — option SISR</p>
-        <p><strong>Établissement :</strong> Lycée Gaston Berger, Lille</p>
-        <p><strong>Promotion :</strong> 2024 – 2026</p>
-        <p><strong>Objectif professionnel :</strong> Administrateur systèmes et réseaux</p>
-        <h3>Présentation personnelle</h3>
-        <p>Étudiant en BTS SIO option SISR, je me spécialise dans les infrastructures réseaux et systèmes. Mon objectif professionnel est de devenir administrateur systèmes et réseaux. J'ai réalisé deux stages formateurs : l'un à l'ARS Hauts-de-France, l'autre à l'École Terrade, qui m'ont permis de mettre en pratique mes compétences en gestion du parc informatique et en administration système.</p>
-        <!-- Ajoute ici le tableau des compétences techniques -->
-    </div>
+        <!-- Onglet Présentation -->
+        <div id="presentation" class="tabcontent">
+            <h2>Présentation du candidat</h2>
+            <p><strong>Nom complet :</strong> Nolan GILLIOCQ</p>
+            <p><strong>Formation :</strong> BTS SIO — option SISR</p>
+            <p><strong>Établissement :</strong> Lycée Gaston Berger, Lille</p>
+            <p><strong>Promotion :</strong> 2024 – 2026</p>
+            <p><strong>Objectif professionnel :</strong> Administrateur systèmes et réseaux</p>
+            <h3>Présentation personnelle</h3>
+            <p>Étudiant en BTS SIO option SISR, je me spécialise dans les infrastructures réseaux et systèmes. Mon objectif professionnel est de devenir administrateur systèmes et réseaux. J'ai réalisé deux stages formateurs : l'un à l'ARS Hauts-de-France, l'autre à l'École Terrade, qui m'ont permis de mettre en pratique mes compétences en gestion du parc informatique et en administration système.</p>
+            <h3>Compétences techniques</h3>
+            <table>
+                <tr>
+                    <th>Domaine</th>
+                    <th>Technologies / Outils</th>
+                    <th>Niveau</th>
+                </tr>
+                <tr>
+                    <td>Réseaux</td>
+                    <td>VLAN, trunk, routage, EtherChannel LACP, Rapid-PVST, NAT, ACL</td>
+                    <td>Intermédiaire</td>
+                </tr>
+                <tr>
+                    <td>Équipements</td>
+                    <td>Cisco WS-C3750G, Cisco 2921, Stormshield SN310</td>
+                    <td>Intermédiaire</td>
+                </tr>
+                <tr>
+                    <td>Systèmes</td>
+                    <td>Linux (Rocky Linux, Debian), Windows Server, macOS</td>
+                    <td>Intermédiaire</td>
+                </tr>
+            </table>
+        </div>
 
-    <!-- Onglet Stage 1 -->
-    <div id="stage1" class="tabcontent">
-        <h2>Stage 1 — ARS Hauts-de-France</h2>
-        <p><strong>Entreprise :</strong> Agence Régionale de Santé Hauts-de-France</p>
-        <p><strong>Secteur :</strong> Administration publique / Santé</p>
-        <p><strong>Période :</strong> Mai – Juin 2025</p>
-        <!-- Ajoute ici le tableau des missions réalisées -->
-    </div>
+        <!-- Onglet Stage 1 -->
+        <div id="stage1" class="tabcontent">
+            <h2>Stage 1 — ARS Hauts-de-France</h2>
+            <p><strong>Entreprise :</strong> Agence Régionale de Santé Hauts-de-France</p>
+            <p><strong>Secteur :</strong> Administration publique / Santé</p>
+            <p><strong>Période :</strong> Mai – Juin 2025</p>
+            <h3>Missions réalisées</h3>
+            <table>
+                <tr>
+                    <th>Mission</th>
+                    <th>Détail</th>
+                    <th>Compétence BTS</th>
+                </tr>
+                <tr>
+                    <td>Mise à disposition du matériel informatique</td>
+                    <td>Préparation, configuration et déploiement de postes utilisateurs</td>
+                    <td>B1.5, B1.1</td>
+                </tr>
+                <tr>
+                    <td>Gestion des tickets via GLPI</td>
+                    <td>Qualification, traitement et suivi des incidents utilisateurs</td>
+                    <td>B1.2</td>
+                </tr>
+            </table>
+        </div>
 
-    <!-- Onglet Stage 2 -->
-    <div id="stage2" class="tabcontent">
-        <h2>Stage 2 — École Terrade</h2>
-        <p><strong>Entreprise :</strong> École Terrade</p>
-        <p><strong>Secteur :</strong> Éducation nationale / Établissement scolaire</p>
-        <p><strong>Période :</strong> Janvier – Février 2026</p>
-        <!-- Ajoute ici le tableau des missions réalisées -->
-    </div>
+        <!-- Onglet Stage 2 -->
+        <div id="stage2" class="tabcontent">
+            <h2>Stage 2 — École Terrade</h2>
+            <p><strong>Entreprise :</strong> École Terrade</p>
+            <p><strong>Secteur :</strong> Éducation nationale / Établissement scolaire</p>
+            <p><strong>Période :</strong> Janvier – Février 2026</p>
+            <h3>Missions réalisées</h3>
+            <table>
+                <tr>
+                    <th>Mission</th>
+                    <th>Détail</th>
+                    <th>Compétence BTS</th>
+                </tr>
+                <tr>
+                    <td>Création d'une base de données du parc informatique</td>
+                    <td>Modélisation et alimentation d'une BDD recensant l'ensemble du matériel</td>
+                    <td>B1.1, B4.3</td>
+                </tr>
+                <tr>
+                    <td>Recensement du matériel</td>
+                    <td>Inventaire physique et logique des équipements informatiques</td>
+                    <td>B1.1</td>
+                </tr>
+            </table>
+        </div>
 
-    <!-- Onglet Projet GastonMediLab -->
-    <div id="projet" class="tabcontent">
-        <h2>Projet GastonMediLab</h2>
-        <p><strong>Contexte :</strong> Conception et déploiement d'une architecture réseau sécurisée pour un laboratoire médical fictif.</p>
-        <!-- Ajoute ici les tableaux d'architecture, VLANs, missions techniques -->
-    </div>
+        <!-- Onglet Projet GastonMediLab -->
+        <div id="projet" class="tabcontent">
+            <h2>Projet GastonMediLab</h2>
+            <p><strong>Contexte :</strong> Conception et déploiement d'une architecture réseau sécurisée pour un laboratoire médical fictif (GastonMediLab). Projet réalisé sur matériel Cisco réel dans le cadre de la formation BTS SIO SISR. Plan d'adressage : <strong>172.16.8.0/21</strong>.</p>
+            <h3>Architecture déployée</h3>
+            <table>
+                <tr>
+                    <th>Équipement</th>
+                    <th>Modèle</th>
+                    <th>Rôle</th>
+                </tr>
+                <tr>
+                    <td>Commutateurs</td>
+                    <td>Cisco WS-C3750G-24TS</td>
+                    <td>Commutation L2/L3, VLANs, EtherChannel LACP, Rapid-PVST</td>
+                </tr>
+                <tr>
+                    <td>Routeur</td>
+                    <td>Cisco 2921</td>
+                    <td>Routage inter-VLAN, Router-on-a-Stick, NAT, ACL, HSRP</td>
+                </tr>
+                <tr>
+                    <td>Firewall</td>
+                    <td>Stormshield SN310</td>
+                    <td>Filtrage, règles NAT, DHCP relay, politique de sécurité</td>
+                </tr>
+            </table>
+            <h3>VLANs configurés</h3>
+            <table>
+                <tr>
+                    <th>VLAN</th>
+                    <th>Nom / Usage</th>
+                    <th>Plage IP</th>
+                </tr>
+                <tr>
+                    <td>VLAN 10</td>
+                    <td>AD / DNS</td>
+                    <td>À préciser</td>
+                </tr>
+                <tr>
+                    <td>VLAN 20</td>
+                    <td>WEB</td>
+                    <td>À préciser</td>
+                </tr>
+                <tr>
+                    <td>VLAN 30</td>
+                    <td>BDD</td>
+                    <td>À préciser</td>
+                </tr>
+                <tr>
+                    <td>VLAN 60</td>
+                    <td>Users</td>
+                    <td>À préciser</td>
+                </tr>
+            </table>
+            <h3>Missions techniques réalisées</h3>
+            <table>
+                <tr>
+                    <th>Mission</th>
+                    <th>Détail</th>
+                    <th>Compétence BTS</th>
+                </tr>
+                <tr>
+                    <td>Configuration commutateurs</td>
+                    <td>VLANs, ports access/trunk, EtherChannel LACP, Rapid-PVST, SSH v2, port security</td>
+                    <td>B2.1, B2.6</td>
+                </tr>
+                <tr>
+                    <td>Configuration routeur</td>
+                    <td>Router-on-a-Stick, routage inter-VLAN, NAT, ACL, DHCP snooping, HSRP</td>
+                    <td>B2.1, B2.3</td>
+                </tr>
+                <tr>
+                    <td>Configuration firewall</td>
+                    <td>Stormshield : règles de filtrage, NAT, DHCP relay, politique de sécurité</td>
+                    <td>B3.5, C1.2</td>
+                </tr>
+                <tr>
+                    <td>Correction d'anomalies</td>
+                    <td>Double NAT, erreurs ACL, STP mismatch, VLAN native mismatch</td>
+                    <td>B1.2, B2.2</td>
+                </tr>
+            </table>
+            <h3>Compétences BTS démontrées</h3>
+            <p>Ce projet mobilise simultanément : <strong>B1.1, B1.2, B1.4, B2.1, B2.2, B2.3, B2.6, B3.5, B4.5, C1.2, C1.3</strong>.</p>
+            <p>Il constitue l'une des preuves les plus solides du portfolio pour l'épreuve E4.</p>
+        </div>
 
-    <!-- Onglet Grilles BTS -->
-    <div id="grilles" class="tabcontent">
-        <h2>Grilles d'évaluation BTS SIO SISR</h2>
-        <!-- Ajoute ici les sections B1, B2, B3, B4, C1 -->
+        <!-- Onglet Grilles BTS -->
+        <div id="grilles" class="tabcontent">
+            <h2>Grilles d'évaluation BTS SIO SISR</h2>
+            <h3>B1 · Support et mise à disposition</h3>
+            <p>Grille d'évaluation partiellement renseignée.</p>
+            <h3>B2 · Réseaux et services</h3>
+            <p>Grille d'évaluation partiellement renseignée.</p>
+            <h3>B3 · Sécurité des infrastructures</h3>
+            <p>Grille d'évaluation à compléter.</p>
+            <h3>B4 · Développement professionnel</h3>
+            <p>Preuves détaillées à enrichir.</p>
+            <h3>C1 · Cybersécurité (option)</h3>
+            <p>Grille d'évaluation à compléter.</p>
+            <h3>Compétences validées via le projet GastonMediLab</h3>
+            <table>
+                <tr>
+                    <th>Compétence</th>
+                    <th>Description</th>
+                    <th>Preuves</th>
+                </tr>
+                <tr>
+                    <td>B1.1</td>
+                    <td>Gérer le patrimoine informatique</td>
+                    <td>Recensement du matériel, base de données du parc informatique</td>
+                </tr>
+                <tr>
+                    <td>B2.1</td>
+                    <td>Installer et configurer des équipements réseau</td>
+                    <td>Configuration des commutateurs et routeurs Cisco</td>
+                </tr>
+                <tr>
+                    <td>B2.6</td>
+                    <td>Exploiter des services réseau</td>
+                    <td>Configuration des VLANs et du routage inter-VLAN</td>
+                </tr>
+                <tr>
+                    <td>B3.5</td>
+                    <td>Mettre en œuvre une politique de sécurité</td>
+                    <td>Configuration du firewall Stormshield et des ACL</td>
+                </tr>
+                <tr>
+                    <td>C1.2</td>
+                    <td>Sécuriser les accès aux réseaux</td>
+                    <td>Configuration des règles de filtrage et NAT sur le firewall</td>
+                </tr>
+            </table>
+        </div>
     </div>
 
     <script>
